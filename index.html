@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUMDes Bumi Raharja Desa Cisitu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <header id="navbar">
+    <div style="display:flex; align-items:center;">
+      <img src="assets/logo.png" alt="Logo BUMDes">
+      <h2>BUMDes Bumi Raharja</h2>
+    </div>
+    <nav>
+      <a href="#profil">Profil</a>
+      <a href="#unit">Unit Usaha</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#berita">Berita & Kegiatan</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <section id="profil">
+    <h1>Profil BUMDes</h1>
+    <p><strong>SERTIFIKAT PENDAFTARAN PENDIRIAN BADAN HUKUM</strong><br>
+    NOMOR: AHU-08567.AH.01.33.TAHUN 2022</p>
+  </section>
+
+  <section id="unit">
+    <h1>Unit Usaha</h1>
+    <ul>
+      <li>Unit Usaha Penjualan Gas 3 kg</li>
+      <li>Unit Usaha Penggilingan Singkong</li>
+      <li>Unit Usaha Pengelolaan Wisata Jatigede</li>
+    </ul>
+  </section>
+
+  <section id="galeri">
+    <h1>Galeri</h1>
+    <p>Foto dan video kegiatan BUMDes Bumi Raharja.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+      <div style="text-align:center;">
+        <img src="assets/galeri/penjualan_gas.jpg" alt="Penjualan Gas 3kg" style="width:300px; border-radius:10px;">
+        <p><strong>Unit Usaha Penjualan Gas 3 Kg</strong></p>
+      </div>
+      <div style="text-align:center;">
+        <video width="320" controls style="border-radius:10px;">
+          <source src="assets/galeri/peletakan_batu_pertama.mp4" type="video/mp4">
+          Browser Anda tidak mendukung pemutar video.
+        </video>
+        <p><strong>Video Peletakan Batu Pertama Pabrik Pengolahan Singkong</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="berita">
+    <h1>Berita & Kegiatan</h1>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px;">
+      <div style="background:#fff; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.1); padding:15px;">
+        <img src="https://placehold.co/400x200" alt="Berita 1" style="width:100%; border-radius:10px;">
+        <h3>Pengolahan Singkong Jadi Produk Olahan Unggulan</h3>
+        <small>📅 15 September 2025</small>
+        <p>BUMDes Bumi Raharja mengembangkan inovasi produk berbahan dasar singkong menjadi gaplek dan olahan makanan lokal.</p>
+      </div>
+      <div style="background:#fff; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.1); padding:15px;">
+        <img src="https://placehold.co/400x200" alt="Berita 2" style="width:100%; border-radius:10px;">
+        <h3>BUMDes Kembangkan Wisata Edukasi Jatigede</h3>
+        <small>📅 2 Oktober 2025</small>
+        <p>Program wisata edukasi mengenalkan potensi alam dan budaya sekitar Waduk Jatigede.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h1>Kontak</h1>
+    <p>Alamat BUMDes:<br>
+    Jl. Cisitu No. 53 RT. 004 RW. 002<br>
+    Cisitu, Cisitu, Kab. Sumedang Jawa Barat 45372</p>
+  </section>
+
+  <footer>
+    <p>© 2025 BUMDes Bumi Raharja Desa Cisitu</p>
+    <div class="social-icons">
+      <a href="https://facebook.com/bumdesbumiraharjacs" target="_blank">Facebook</a> |
+      <a href="https://instagram.com/bumdesbumiraharjacs" target="_blank">Instagram</a> |
+      <a href="https://youtube.com/@bumdesbumiraharjacs" target="_blank">YouTube</a>
+    </div>
+  </footer>
+
+  <button id="backToTop" title="Kembali ke atas">↑</button>
+
+  <script>
+    const btn = document.getElementById("backToTop");
+    const navbar = document.getElementById("navbar");
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", function() {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      btn.style.display = scrollTop > 200 ? "block" : "none";
+      if (scrollTop > lastScrollTop) {
+        navbar.classList.add("hidden");
+      } else {
+        navbar.classList.remove("hidden");
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+
+    btn.onclick = function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+  </script>
+
+</body>
+</html>
